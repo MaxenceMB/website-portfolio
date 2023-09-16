@@ -1,0 +1,177 @@
+<!-- ***********************************************************
+
+@Author: Maxence MAURY-BALIT
+Fichier HTML pour mon site PortFolio maxence-maury-balit.com
+
+Le fichier représente la page d'accueil du site web
+
+*********************************************************** --->
+
+<!DOCTYPE html>
+<html lang = "fr">
+    <head>
+        <title>Maxence MAURY-BALIT</title>
+
+        <link rel = "stylesheet" href = "CSS/style.css">
+        <script src = "JAVASCRIPT/script.js"></script>
+
+        <meta name = "description" content = "site-web personnel de MAURY Maxence">
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+    </head>
+
+    <body>
+        <header>
+            <nav class = "container">
+                <a href = "https://www.linkedin.com/in/maxence-maury-balit-0633ba281/" target = "blank">
+                    <img src = "MEDIAS/LOGOS/logo.png" id = "logo" alt = "logo Max MB">
+                </a>
+
+                <ul>
+                    <li class = "fr"><a href = "#">Accueil</a></li>
+                    <li class = "fr"><a href = "#">A propos</a></li>
+                    <li class = "fr"><a href = "#">Mes travaux</a></li>
+                    <li class = "fr"><a href = "#">Me contacter</a></li>
+
+                    <li class = "en"><a href = "#">Home</a></li>
+                    <li class = "en"><a href = "#">About me</a></li>
+                    <li class = "en"><a href = "#">My works</a></li>
+                    <li class = "en"><a href = "#">Contacts</a></li>
+
+                    <button type = "button" id = "language-button" onClick = "translation()">English</button> 
+                </ul>
+            </nav>
+
+            <div id = "main_title">
+                <h1>Maxence MAURY-BALIT</h1>
+                <p class = "fr">Etudiant en informatique - "Developpement d'applications"</p>
+                <p class = "en">Student in Computer Science - "App development"</p>
+            </div>
+        </header>
+
+        <main>
+
+            <!-- About me Section -->
+            <div id = "about" class = "container">
+                <div class = "col1 fr">
+                    <h2>A mon propos</h2>
+                    <p>
+                        Originaire du Tarn, je suis un jeune étudiant passionné par l'informatique. Depuis mon plus jeune âge j'ai acquis des compétences de manière autodidacte dans de nombreux domaines, mais principalement le développement. Étant un grand perfectionniste, j'aborde les défis avec un état d'esprit créatif et innovant mais surtout persévérant.
+                    </p>
+
+                    <div id = "about-tab">
+                        <p onClick = "openAboutTab('about-skills-fr')" class = "about-tab-title active-link">Compétences</p>
+                        <p onClick = "openAboutTab('about-education-fr')" class = "about-tab-title">Éducation</p>
+                        <p onClick = "openAboutTab('about-professional-fr')" class = "about-tab-title">Expériences Professionnelles</p>
+                    </div>
+
+                    <div class = "about-tab-content active-tab" id = "about-skills-fr">
+                        <ul>
+                            <li class = "about-tab-content-text"><span>Programmeur Front & Back End</span></li>
+                            <li class = "about-tab-content-logos">
+                                    <img class = "logos" title = "Java" src = "MEDIAS/LOGOS/logo_java.png">
+                                    <img class = "logos" title = "C" src = "MEDIAS/LOGOS/logo_c.png">
+                                    <img class = "logos" title = "Python" src = "MEDIAS/LOGOS/logo_python.png">
+                                    <img class = "logos right_space" title = "Ada" src = "MEDIAS/LOGOS/logo_ada.png">
+                                    <img class = "logos" title = "HTML" src = "MEDIAS/LOGOS/logo_html.png">
+                                    <img class = "logos" title = "CSS" src = "MEDIAS/LOGOS/logo_css.png">
+                            </li>
+
+                            <li class = "about-tab-content-text"><span>Développeur de jeux vidéos (Graphisme et Programmation)</span></li>
+                            <li class = "about-tab-content-logos">
+                                    <img class = "logos" title = "Unity" src = "MEDIAS/LOGOS/logo_unity.png">
+                                    <img class = "logos" title = "Blender" src = "MEDIAS/LOGOS/logo_blender.png">
+                                    <img class = "logos" title = "Paint.net" src = "MEDIAS/LOGOS/logo_paintnet.png">
+                            </li>
+
+                            <li class = "about-tab-content-text"><span>Monteur vidéo</span></li>
+                            <li class = "about-tab-content-logos">
+                                    <img class = "logos" title = "Vegas Pro" src = "MEDIAS/LOGOS/logo_vegaspro.png">
+                                    <img class = "logos" title = "Camtasia Studio" src = "MEDIAS/LOGOS/logo_camtasia.png">
+                            </li>
+
+                            <li class = "about-tab-content-text"><span>+ Maitrise de la suite LibreOffice (Principalement Writter & Calc)</span></li>
+                        </ul>
+                    </div>
+                    <div class = "about-tab-content" id = "about-education-fr">
+                        <ul>
+                            <li class = "about-tab-content-text"><span>Bachelor d'Université Technologique en Informatique</span>
+                                                                <br>2022-2025 - En cours</li>
+
+                            <li class = "about-tab-content-text"><span>Baccalauréat Technologique - Système d'Information et Numérique (STI2D)</span>
+                                                                <br>2020-2022 - 14.48/20 (Mention Bien)</li>
+                        </ul>
+                    </div>
+                    <div class = "about-tab-content" id = "about-professional-fr">
+                        <ul>
+                            <li class = "about-tab-content-text"><span>Aucune expérience profesionnelle à ce jour.</span>
+                                                                <br>---</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class = "col1 en">
+                    <h2>About me</h2>
+                    <p>
+                        Born in south-west of France, I am a young and passionate computer science student. Since my youngest age I learnt by myself a lot of skills in different domains, but most importantly in development. As a perfectionnist, I face challenges with a creative, innovative and persistent mindset.
+                    </p>
+
+                    <div id = "about-tab">
+                        <p onClick = "openAboutTab('about-skills-en')" class = "about-tab-title active-link">Skills</p>
+                        <p onClick = "openAboutTab('about-education-en')" class = "about-tab-title">Education</p>
+                        <p onClick = "openAboutTab('about-professional-en')" class = "about-tab-title">Professional Experiences</p>
+                    </div>
+
+                    <div class = "about-tab-content active-tab" id = "about-skills-en">
+                        <ul>
+                            <li class = "about-tab-content-text"><span>Front & Back End Programmer</span></li>
+                            <li class = "about-tab-content-logos">
+                                    <img class = "logos" title = "Java" src = "MEDIAS/LOGOS/logo_java.png">
+                                    <img class = "logos" title = "C" src = "MEDIAS/LOGOS/logo_c.png">
+                                    <img class = "logos" title = "Python" src = "MEDIAS/LOGOS/logo_python.png">
+                                    <img class = "logos right_space" title = "Ada" src = "MEDIAS/LOGOS/logo_ada.png">
+                                    <img class = "logos" title = "HTML" src = "MEDIAS/LOGOS/logo_html.png">
+                                    <img class = "logos" title = "CSS" src = "MEDIAS/LOGOS/logo_css.png">
+                            </li>
+
+                            <li class = "about-tab-content-text"><span>Video games developper (Graphism and Programming)</span></li>
+                            <li class = "about-tab-content-logos">
+                                    <img class = "logos" title = "Unity" src = "MEDIAS/LOGOS/logo_unity.png">
+                                    <img class = "logos" title = "Blender" src = "MEDIAS/LOGOS/logo_blender.png">
+                                    <img class = "logos" title = "Paint.net" src = "MEDIAS/LOGOS/logo_paintnet.png">
+                            </li>
+
+                            <li class = "about-tab-content-text"><span>Video editor</span></li>
+                            <li class = "about-tab-content-logos">
+                                    <img class = "logos" title = "Vegas Pro" src = "MEDIAS/LOGOS/logo_vegaspro.png">
+                                    <img class = "logos" title = "Camtasia Studio" src = "MEDIAS/LOGOS/logo_camtasia.png">
+                            </li>
+
+                            <li class = "about-tab-content-text"><span>+ Mastery of LibreOffice software series (mostly Writter & Calc)</span></li>
+                        </ul>
+                    </div>
+                    <div class = "about-tab-content" id = "about-education-en">
+                        <ul>
+                            <li class = "about-tab-content-text"><span>Bachelor degree in Computer Science</span>
+                                                                <br>2022-2025 - Ongoing</li>
+
+                            <li class = "about-tab-content-text"><span>High-School Diploma - Information and Digital System (STI2D)</span>
+                                                                <br>2020-2022 - 14.48/20</li>
+                        </ul>
+                    </div>
+                    <div class = "about-tab-content" id = "about-professional-en">
+                        <ul>
+                            <li class = "about-tab-content-text"><span>No professional experience to this day.</span>
+                                                                <br>20?? - ???</li>
+                        </ul>
+                    </div></div>
+
+                <div class = "col2">
+                    <img src = "MEDIAS/Portrait_1.jpg" alt = "Maxence Portrait">
+                </div>
+            </div>
+
+             <!-- My work Section -->
+            <div id = "works" class = "container">
+            </div>
+        </main>
+    </body>
+</html> 

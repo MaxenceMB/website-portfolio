@@ -1,0 +1,284 @@
+/***********************************************************
+
+@Author: Maxence MAURY-BALIT
+Fichier CSS pour mon site PortFolio maxence-maury-balit.com
+
+Ce fichier CSS est commun pour toutes les pages du site web
+
+***********************************************************/
+
+/* COULEURS:
+
+Bleu Foncé: #101929
+Bleu Mid 1: #29314A
+Bleu Mid 2: #313A63
+Bleu Clair: #5A7394
+
+Marron Foncé     : #523129
+Marron Mid 1     : #846352
+Marron Mid 2     : #B58C6B
+Marron Très Clair: #CEBDB5
+
+*/
+
+@font-face { font-family: Minecraft; src: url('../FONTS/Minecraft.ttf'); } 
+
+* {
+	margin : 0;
+	padding: 0;
+
+	font-family: verdana;
+	box-sizing : border-box;
+}
+
+body {
+	color: #CEBDB5;            /* Marron Très Clair */
+	background-color: #101929; /* Bleu Foncé */
+}
+
+.container {
+	padding: 10px 10%;
+}
+
+.en {
+	display: none;
+}
+
+
+/* HEADER  */
+
+header {
+	width : 100%;
+	height: 100vh;
+
+	background-image   : url(../MEDIAS/Background_PixelMax.png);
+	background-size    : cover;
+	background-position: center;
+
+	box-shadow: 0 0 10px 10px #101929 inset;
+}
+
+
+/* Menu bar */
+
+#logo {
+	width : 240px;
+	margin: 10px;
+
+	transition: 0.5s;
+}
+
+#logo:hover {
+	transform: scale(1.15);
+}
+
+nav {
+	background-color: rgba(0, 0, 0, 0.25); /* Noir transparent */
+
+	display    : flex;
+	align-items: center;
+	flex-wrap  : wrap;
+	justify-content: space-between;
+}
+
+nav ul li {
+	display   : inline-block;
+	list-style: none;
+	margin    : 10px 10px;
+}
+
+nav ul li a {
+	color    : #CEBDB5; /* Marron Très Clair */
+	font-size: 18px;
+	text-decoration: none;
+
+	position: relative;
+}
+
+nav ul li a::after {
+	content: '';
+	background-color: #B58C6B; /* Marron Mid 2 */
+
+	width   : 0;
+	height  : 3px;
+	position: absolute;
+	right   : 0;
+	bottom  : -5px;
+	
+	transition: 0.35s;
+}
+
+nav ul li a:hover::after {
+	width: 100%;
+}
+
+#language-button {
+	border : none;
+	border-radius: 10px;
+
+	padding: 10px;
+	width  : 110px;
+	display: inline-block;
+	margin-left : 10px;
+
+	color: #313A63; /* Bleu Mid 2 */
+	background-color: #5A7394; /* Bleu Clair */
+
+	text-align     : center;
+	font-size      : 16px;
+	text-decoration: none;
+
+	transition-duration: 0.4s;
+
+	cursor: pointer;
+}
+
+#language-button:hover {
+	color: #5A7394; /* Bleu Clair */
+	background-color: #313A63; /* Bleu Mid 2 */
+}
+
+
+/* Titre principal */
+
+#main_title {
+	margin: 20% 8% 0% 0%;
+
+	text-align: right;
+}
+
+#main_title h1 {
+	font-family: Minecraft;
+	font-size  : 75px;
+
+	animation-name: mainTitle;
+  	animation-duration: 2s;
+}
+
+@keyframes mainTitle {
+	from { 
+		font-size: 50px; 
+		color: #B58C6B
+		}
+}
+
+#main_title p {
+	font-family: Minecraft;
+	font-size  : 20px;
+	color      : #B58C6B; /* Marron Mid 2 */
+
+	margin-right: 10px;
+}
+
+
+/* About me section */
+
+#about {
+	padding: 80px 0;
+	margin: 150px;
+
+	display  : flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.col1 {
+	flex-basis: 60%;
+}
+
+.col1 > h2 {
+	font-family: Minecraft;
+	font-size  : 60px;
+	color      : #B58C6B; /* Marron Mid 2 */
+}
+
+.col1 > p {
+	margin: 20px 0;
+
+	font-size : 16px;
+	text-align: justify;
+}
+
+#about-tab {
+	display: flex;
+	margin : 20px 0 40px;
+	padding-top: 15px;
+}
+
+.about-tab-title {
+	margin-right: 50px;
+	position: relative;
+
+	font-size  : 20px;
+
+	cursor: pointer;
+}
+
+.about-tab-title::after {
+	content: '';
+	background-color: #B58C6B; /* Marron Mid 2 */
+
+	width   : 0;
+	height  : 3px;
+	position: absolute;
+	left    : 0;
+	bottom  : -5px;
+
+	transition: 0.35s;
+}
+
+.about-tab-title:hover::after {
+	width: 100%;
+}
+
+.about-tab-title.active-link::after {
+	width: 100%;
+}
+
+.about-tab-content ul li {
+	list-style: none;
+
+	margin: 10px 0; 
+}
+
+.about-tab-content {
+	display: none;
+}
+
+.about-tab-content.active-tab {
+	display: block;
+}
+
+.about-tab-content-text > span {
+	color: #B58C6B; /* Marron Mid 2 */
+}
+
+.logos {
+	width: 50px;
+	margin-bottom: 15px;
+
+	transition: 0.25s;
+}
+
+.logos:hover {
+	transform: scale(1.25);
+}
+
+.logos.right_space {
+	margin-right: 20px;
+}
+
+.col2 {
+	flex-basis: 35%;
+}
+
+.col2 img {
+	width: 100%;
+	border-radius: 15px;
+
+	transition: 1s;
+}
+
+.col2 img:hover {
+	transform: scale(1.05);
+}
