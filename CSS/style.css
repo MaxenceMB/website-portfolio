@@ -36,6 +36,10 @@ body {
 	padding: 10px 10%;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 
 
 /* HEADER  */
@@ -48,7 +52,7 @@ header {
 	background-size    : cover;
 	background-position: center;
 
-	box-shadow: 0 -20px 10px -10px var(--dark-green) inset;
+	box-shadow: 0 -50px 15px -30px var(--dark-green) inset;
 }
 
 
@@ -126,6 +130,12 @@ nav ul li a:hover::after {
 	color      : var(--mid-accent);
 
 	margin-right: 10px;
+}
+
+
+/* jsp */
+.anchor {
+	width: 100%;
 }
 
 
@@ -352,20 +362,23 @@ nav ul li a:hover::after {
 	background-image: linear-gradient(182deg, var(--white) 10%, var(--dark-green) calc(10% + 2px));
 }
 
+.section-header {
+	width: 100%;
+}
 
-#contacts hr {
+.section-header h2 {
+	font-family: Beige-Miracle;
+	font-size  : 60px;
+	color      : var(--mid-accent);
+}
+
+.section-header hr {
 	color: var(--mid-accent);
 	margin: 30px 0;
 }
 
 #contacts > .col1 {
-	flex-basis: 75%;
-}
-
-#contacts > .col1 > h2 {
-	font-family: Beige-Miracle;
-	font-size  : 60px;
-	color      : var(--mid-accent);
+	flex-basis: 60%;
 }
 
 #message-form {
@@ -381,8 +394,35 @@ nav ul li a:hover::after {
 .contact-input {
 	display: flex;
 	flex-direction: column;
+}
 
-	width: inherit;
+.contact-input > label {
+	font-size: 20px;
+
+	margin-bottom:  10px;
+	padding-bottom: 10px;
+
+	border-bottom: solid 2px var(--white);
+}
+
+.contact-input > .msg-input {
+	padding: 10px;
+
+	border: solid 1px var(--white);
+	border-radius: 7px;
+	background-color: var(--dark-green);
+
+	font-size: 15px;
+	color: var(--white);
+
+	transition: 0.25s;
+}
+
+.msg-input:focus {
+	outline: none;
+
+	background-color: var(--white);
+	color: var(--dark-green);
 }
 
 .contact-input.short {
@@ -393,4 +433,61 @@ nav ul li a:hover::after {
 .contact-input.large {
 	flex: 100%;
 	padding: 10px;
+}
+
+.contact-input.large > textarea {
+	resize: vertical;
+}
+
+.contact-buttons {
+	padding: 10px;
+}
+
+.contact-buttons > input {
+	width: 75px;
+	height: 40px;
+
+	border: solid 1px var(--white);
+	border-radius: 7px;
+	background-color: var(--dark-green);
+
+	font-size: 15px;
+	color: var(--white);
+
+	transition: 0.25s;
+}
+
+.contact-buttons > input:hover {
+	background-color: var(--white);
+	color: var(--dark-green);
+}
+
+#contacts > .col2 {
+	flex-basis: 40%;
+	flex-direction: column;
+
+	margin: auto 0;
+
+	padding-left: 25px;
+}
+
+.contact-option {
+	width: 100%;
+	margin: 10px;
+
+	border-radius: 10px;
+}
+
+
+/* Footer */
+footer {
+	background-color: var(--white);
+	height: 25vh;
+
+	text-align: center;
+}
+
+footer > p {
+	padding-top: 20vh;
+	color: var(--dark-green);
 }

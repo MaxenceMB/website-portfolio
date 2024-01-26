@@ -29,10 +29,10 @@ Le fichier représente la page d'accueil du site web
                 </a>
 
                 <ul>
-                    <li><a href = "#">Home</a></li>
-                    <li><a href = "#">About me</a></li>
-                    <li><a href = "#">My works</a></li>
-                    <li><a href = "#">Contacts</a></li>
+                    <li><a href = "index.html">Home</a></li>
+                    <li><a href = "#about-anchor">About me</a></li>
+                    <li><a href = "#works-anchor">My works</a></li>
+                    <li><a href = "#contacts-anchor">Contacts</a></li>
                 </ul>
             </nav>
 
@@ -48,6 +48,8 @@ Le fichier représente la page d'accueil du site web
 
             <!-- About me Section -->
             <div id = "about" class = "container">
+                
+                <span id = "about-anchor" class = "anchor"></span>
 
                 <!-- Left side -->
                 <div class = "col1">
@@ -138,6 +140,8 @@ Le fichier représente la page d'accueil du site web
 
              <!-- My work Section -->
             <div id = "works" class = "container">
+                <span id = "works-anchor" class = "anchor"></span>
+
                 <div class = "col1">
                     <h2>My works</h2>
                     <p>
@@ -159,33 +163,48 @@ Le fichier représente la page d'accueil du site web
 
             <!-- Contacts Section -->
             <div id = "contacts" class = "container">
-                <div class = "col1">
+                <span id = "contacts-anchor" class = "anchor"></span>
+
+                <div class = "section-header">
                     <h2>Contact me</h2>
                     <hr>
+                </div>
 
-                    <form id = "message-form">
+                <div class = "col1">
+                    <form id = "message-form" action ="#">
                         <div id = "top-form">
                             <div class = "contact-input short">
                                 <label for = "name">Your name</label>
-                                <input id = "name" placeholder = "Ex. Mark GOLDSMITH"></input>
+                                <input class = "msg-input" type = "text" id = "name" placeholder = "Ex. Mark GOLDSMITH"></input>
                             </div>
                             <div class = "contact-input short">
                                 <label for = "name">Your email</label>
-                                <input id = "name" placeholder = "Ex. mark.goldsmith@gmail.com"></input>
+                                <input class = "msg-input" type = "text" id = "mail" placeholder = "Ex. mark.goldsmith@gmail.com"></input>
                             </div>
                         </div>
 
                         <div class = "contact-input large">
                             <label for = "name">Your message</label>
-                            <textarea id = "name" placeholder = "Write your message here..."></textarea>
+                            <textarea class = "msg-input" id = "msg" rows = "10" placeholder = "Write your message here..."></textarea>
                         </div>
-                    </div>
-                </form>
+
+                        <div class = "contact-buttons">
+                            <input type = "submit" name = "send"  value = "Send"/>
+                            <input type = "submit" name = "reset" value = "Reset"/>
+                        </div>
+                    </form>
+                </div>
 
                 <div class = "col2">
+                    <img class = "contact-option" title = "Lycée Las Cases" src = "MEDIAS/EDUCATION/iut_tlse3.PNG">
+                    <img class = "contact-option" title = "Lycée Las Cases" src = "MEDIAS/EDUCATION/iut_tlse3.PNG">
                 </div>
             </div>
 
         </main>
+
+        <footer>
+            <p>@MaxenceMB - 2024</p>
+        </footer>
     </body>
 </html> 
