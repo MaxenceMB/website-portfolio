@@ -11,6 +11,7 @@ Le fichier représente la page d'accueil du site web
 <html lang = "en">
     <head>
         <title>Maxence MAURY-BALIT</title>
+        <link rel = "icon" type = "image/png" href = "MEDIAS/mmb_icon.png" />
 
         <link rel = "stylesheet" href = "CSS/style.css">
         <script src = "JAVASCRIPT/script.js"></script>
@@ -23,7 +24,7 @@ Le fichier représente la page d'accueil du site web
         <header>
 
             <!-- Menu bar -->
-            <nav class = "container">
+            <nav>
                 <a href = "index.html">
                     <img src = "MEDIAS/mmb_logo.png" id = "logo" alt = "logo Max MB">
                 </a>
@@ -38,7 +39,7 @@ Le fichier représente la page d'accueil du site web
 
             <!-- Home page -->
             <div id = "main_title">
-                <h1>Maxence MAURY-BALIT</h1>
+                <h1>Maxence <span><br></span>MAURY-BALIT</h1>
                 <p>Computer Science student in App development</p>
             </div>
         </header>
@@ -106,7 +107,7 @@ Le fichier représente la page d'accueil du site web
                         <ul>
                             <li class = "about-tab-content-text">
                                 <span>Bachelor degree in Computer Science</span>
-                                <br>2022-2025 - Toulouse 🇫🇷<br>
+                                <p><br>2022-2025 - Toulouse 🇫🇷<br></p>
 
                                 <img class = "edu-img" title = "IUT Paul Sabatier" src = "MEDIAS/EDUCATION/iut_tlse3.PNG">
                             </li>
@@ -114,7 +115,7 @@ Le fichier représente la page d'accueil du site web
 
                             <li class = "about-tab-content-text">
                                 <span>High-School Diploma - Information and Digital System (STI2D)</span>
-                                <br>2020-2022 - Lavaur 🇫🇷<br>
+                                <p><br>2020-2022 - Lavaur 🇫🇷<br></p>
 
                                 <img class = "edu-img" title = "Lycée Las Cases" src = "MEDIAS/EDUCATION/lycee_las_cases.JPG">
                             </li>
@@ -126,14 +127,14 @@ Le fichier représente la page d'accueil du site web
                         <ul>
                             <li class = "about-tab-content-text">
                                 <span>No professional experience to this day.</span>
-                                <br>20?? - ???
+                                <p><br>20?? - ???<br></p>
                             </li>
                         </ul>
                     </div>
                 </div>
 
                 <div class = "col2">
-                    <img src = "MEDIAS/PORTRAITS/portrait_0.jpg" alt = "Maxence Portrait">
+                    <img src = "MEDIAS/PORTRAITS/portrait_0.JPG" alt = "Maxence Portrait">
                 </div>
             </div>
 
@@ -189,15 +190,34 @@ Le fichier représente la page d'accueil du site web
                         </div>
 
                         <div class = "contact-buttons">
-                            <input type = "submit" name = "send"  value = "Send"/>
                             <input type = "submit" name = "reset" value = "Reset"/>
+                            <input type = "submit" name = "send"  value = "Send"/>
                         </div>
                     </form>
                 </div>
 
                 <div class = "col2">
-                    <img class = "contact-option" title = "Lycée Las Cases" src = "MEDIAS/EDUCATION/iut_tlse3.PNG">
-                    <img class = "contact-option" title = "Lycée Las Cases" src = "MEDIAS/EDUCATION/iut_tlse3.PNG">
+                    <div class = contact-option>
+                        <img class = "contact-logos" title = "C" src = "MEDIAS/LOGOS/logo_c.png">
+                        <div class = "contact-content">
+                            <h3>Contact title</h3>
+                            <p>Some text here and there</p>
+                        </div>
+                    </div>
+                    <div class = contact-option>
+                        <img class = "contact-logos" title = "C" src = "MEDIAS/LOGOS/logo_c.png">
+                        <div class = "contact-content">
+                            <h3>Contact title</h3>
+                            <p>Some text here and there</p>
+                        </div>
+                    </div>
+                    <div class = contact-option>
+                        <img class = "contact-logos" title = "C" src = "MEDIAS/LOGOS/logo_c.png">
+                        <div class = "contact-content">
+                            <h3>Contact title</h3>
+                            <p>Some text here and there</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
