@@ -21,6 +21,9 @@ Le fichier représente la page d'accueil du site web
     </head>
 
     <body>
+
+        <div id = "loader"></div>
+
         <header>
 
             <!-- Menu bar -->
@@ -226,5 +229,12 @@ Le fichier représente la page d'accueil du site web
         <footer>
             <p>@MaxenceMB - 2024</p>
         </footer>
+
+        <script>
+            var loader = document.getElementById("loader");
+            window.addEventListener("load", function() {
+                loader.style.display = "none";
+            });
+        </script>
     </body>
 </html> 
