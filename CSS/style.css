@@ -118,6 +118,7 @@ header {
 	width: auto;
 	height: auto;
 
+	z-index: 1001;
 	transition: 0.5s;
 }
 
@@ -126,7 +127,6 @@ header {
 }
 
 nav {
-
 	display    : flex;
 	align-items: center;
 	flex-wrap  : wrap;
@@ -135,6 +135,7 @@ nav {
 	padding: 0 10%;
 	min-height: 110px;
 
+	z-index: 1000;
 	transition: 0.2s;
 }
 
@@ -149,7 +150,7 @@ nav {
 }
 
 #menu_links li a {
-	color    : var(--white);
+	color    : var(--dark-green);
 	font-size: var(--fontsize-tabs);
 	text-decoration: none;
 
@@ -158,7 +159,7 @@ nav {
 
 #menu_links li a::after {
 	content: '';
-	background-color: var(--mid-accent);
+	background-color: var(--white);
 
 	width   : 0;
 	height  : 3px;
@@ -177,6 +178,8 @@ nav {
 #hamburger {
 	display: none;
 	cursor: pointer;
+
+	z-index: 1001;
 }
 
 .hamburger_bar {
@@ -219,8 +222,8 @@ nav {
 		z-index: 100;
 
 		width: 100%;
-		left: 100%;
-		top: 80px;
+		top: -10%;
+		left: 0;
 		gap: 0;
 
 		background-color: var(--white);
@@ -229,6 +232,7 @@ nav {
 		text-align: center;
 
 		transition: 0.3s;
+		opacity: 0%;
 	}
 
 	#menu_links > li {
@@ -239,12 +243,9 @@ nav {
 		border-top: solid 1px var(--dark-green);
 	}
 
-	#menu_links > li > a {
-		color: var(--dark-green);
-	}
-
 	#menu_links.active {
-		left: 0;
+		opacity: 100%;
+		top: 80px;
 	}
 }
 
@@ -290,10 +291,6 @@ nav {
 		width: 80%;
 		margin: 0;
 		text-align: center;
-	}
-
-	#main_title h1 > span {
-		display: flex;
 	}
 }
 
@@ -733,7 +730,7 @@ nav {
 	flex-basis: 25%;
 
 	margin-right: 25px;
-	width: 100%;
+	width: min(10vmin, 65px);
 }
 
 .contact-content {
