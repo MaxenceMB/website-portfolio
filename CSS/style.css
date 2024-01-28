@@ -23,28 +23,21 @@ Ce fichier CSS est commun pour toutes les pages du site web
 	--fontsize-maintitle: 	10vmin;
 	--fontsize-subtitle: 	 4vmin;
 
-	--fontsize-headers: 	 6vmin;
-	--fontsize-large-text: 	 3vmin;
-	--fontsize-tabs:	   2.2vmin;
-	--fontsize-p: 			 2vmin;
+	--fontsize-headers: 	 50px;
+	--fontsize-large-text: 	 35px;
+	--fontsize-tabs:	   	 20px;
+	--fontsize-p: 			 18px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 750px) {
 	:root {
-		--fontsize-maintitle: 	 75px;
-		--fontsize-subtitle: 	 30px;
-	
+		--fontsize-maintitle: 	12vmin;
+		--fontsize-subtitle: 	 5vmin;
+
 		--fontsize-headers: 	 40px;
-		--fontsize-large-text: 	 20px;
-		--fontsize-tabs:		 18px;
-		--fontsize-p: 			 15px;
-	}
-}
-
-@media (max-width: 500px) {
-	:root {
-		--fontsize-maintitle: 	 65px;
-		--fontsize-subtitle: 	 25px;
+		--fontsize-large-text: 	 30px;
+		--fontsize-tabs:	   	 18px;
+		--fontsize-p: 			 16px;
 	}
 }
 
@@ -113,7 +106,7 @@ header {
 @media(max-width: 750px) {
 	header {
 		background-image   : url(../MEDIAS/background_phone.png);
-		background-position: center;
+		background-position: top;
 	}
 }
 
@@ -133,7 +126,6 @@ header {
 }
 
 nav {
-	background-color: rgba(8, 44, 44, 0.15); /* Vert foncé transparent */
 
 	display    : flex;
 	align-items: center;
@@ -141,15 +133,22 @@ nav {
 	justify-content: space-between;
 
 	padding: 0 10%;
+	min-height: 110px;
+
+	transition: 0.2s;
 }
 
-nav ul li {
+#menu_links {
+	display: flex;
+}
+
+#menu_links li {
 	display   : inline-block;
 	list-style: none;
 	margin    : 10px 10px;
 }
 
-nav ul li a {
+#menu_links li a {
 	color    : var(--white);
 	font-size: var(--fontsize-tabs);
 	text-decoration: none;
@@ -157,7 +156,7 @@ nav ul li a {
 	position: relative;
 }
 
-nav ul li a::after {
+#menu_links li a::after {
 	content: '';
 	background-color: var(--mid-accent);
 
@@ -170,8 +169,83 @@ nav ul li a::after {
 	transition: 0.35s;
 }
 
-nav ul li a:hover::after {
+#menu_links li a:hover::after {
 	width: 100%;
+}
+
+/* Hamburger menu */
+#hamburger {
+	display: none;
+	cursor: pointer;
+}
+
+.hamburger_bar {
+	display: block;
+
+	width: 25px;
+	height: 3px;
+	margin: 5px auto;
+
+	background-color: var(--white);
+
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+
+@media(max-width: 750px) {
+	nav {
+		min-height: 80px;
+	}
+
+	#logo {
+		max-height: 75px;
+	}
+
+	nav.active {
+		background-color: var(--white);
+	}
+
+	#hamburger {
+		display: block;
+	}
+
+	#hamburger.active .hamburger_bar:nth-child(1) { background-color: var(--dark-green); transform: translateY(8px) rotate(45deg); }
+	#hamburger.active .hamburger_bar:nth-child(2) { opacity: 0; }
+	#hamburger.active .hamburger_bar:nth-child(3) { background-color: var(--dark-green); transform: translateY(-8px) rotate(-45deg); }
+
+	#menu_links {
+		position: absolute;
+		z-index: 100;
+
+		width: 100%;
+		left: 100%;
+		top: 80px;
+		gap: 0;
+
+		background-color: var(--white);
+		
+		flex-direction: column;
+		text-align: center;
+
+		transition: 0.3s;
+	}
+
+	#menu_links > li {
+		padding: 15px 0;
+		margin: 0;
+		width: 100%;
+
+		border-top: solid 1px var(--dark-green);
+	}
+
+	#menu_links > li > a {
+		color: var(--dark-green);
+	}
+
+	#menu_links.active {
+		left: 0;
+	}
 }
 
 
@@ -206,9 +280,15 @@ nav ul li a:hover::after {
 	}
 }
 
-@media(max-width: 800px) {
+@media(max-width: 950px) {
 	#main_title {
-		margin: 50vh 5% 0;
+		position: absolute;
+		top: 65%;
+		left: 50%;
+		transform: translateX(-50%);
+
+		width: 80%;
+		margin: 0;
 		text-align: center;
 	}
 

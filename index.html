@@ -13,13 +13,20 @@ Le fichier représente la page d'accueil du site web
         <title>Maxence MAURY-BALIT</title>
         <link rel = "icon" type = "image/png" href = "MEDIAS/mmb_icon.png" />
 
-        <link rel = "stylesheet" href = "CSS/style.css">
-
-        <script type = "text/javascript" src = "JAVASCRIPT/jquery-3.7.1.min.js"></script>
-        <script src = "JAVASCRIPT/script.js"></script>
-
-        <meta name = "description" content = "MAURY-BALIT Maxence's website">
+        <!-- Cool meta stuff -->
+        <meta name = "subtitle"     content = "I have my own website now, so cool">
+        <meta name = "description"  content = "Maxence MB's personnal website. Autobiography, works showcase and contact infos.">
+        <meta name = "keywords"     content = "portfolio, developer">
+        <meta name = "subject"      content = "MAURY-BALIT Maxence's works showcase">
+        <meta name = "language"     content = "EN">
+        <meta name = "author"       content = "Maxence MAURY-BALIT, maury.maxence13@gmail.com">
+        <meta name = "url"          content = "https://max-mb.com">
+        <meta rel  = "bookmark"     title = "Maxence MB website" href = "https://max-mb.com">
+        
+        <meta charset = "utf-8">
         <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+
+        <link rel = "stylesheet" href = "CSS/style.css">
     </head>
 
     <body>
@@ -34,12 +41,18 @@ Le fichier représente la page d'accueil du site web
                     <img src = "MEDIAS/mmb_logo.png" id = "logo" alt = "logo Max MB">
                 </a>
 
-                <ul>
-                    <li><a href = "index.html">Home</a></li>
-                    <li><a href = "#about-anchor">About me</a></li>
-                    <li><a href = "#works-anchor">My works</a></li>
-                    <li><a href = "#contacts-anchor">Contacts</a></li>
+                <ul id = "menu_links">
+                    <li><a class = "nav_link" href = "index.html"      >Home    </a></li>
+                    <li><a class = "nav_link" href = "#about-anchor"   >About me</a></li>
+                    <li><a class = "nav_link" href = "#works-anchor"   >My works</a></li>
+                    <li><a class = "nav_link" href = "#contacts-anchor">Contacts</a></li>
                 </ul>
+
+                <div id = "hamburger">
+                    <span class = "hamburger_bar"></span>
+                    <span class = "hamburger_bar"></span>
+                    <span class = "hamburger_bar"></span>
+                </div>
             </nav>
 
             <!-- Home page -->
@@ -231,7 +244,9 @@ Le fichier représente la page d'accueil du site web
         <footer>
             <p>@MaxenceMB - 2024</p>
         </footer>
-
+        
+        <script type = "text/javascript" src = "JAVASCRIPT/jquery-3.7.1.min.js"></script>
+        <script type = "text/javascript" src = "JAVASCRIPT/script.js"></script>
         <script>
             $(window).on("load", function() {
                 $("#loader").fadeOut("slow");
