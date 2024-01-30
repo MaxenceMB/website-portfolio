@@ -27,6 +27,7 @@ Ce fichier CSS est commun pour toutes les pages du site web
 	--fontsize-large-text: 	 35px;
 	--fontsize-tabs:	   	 20px;
 	--fontsize-p: 			 18px;
+	--fontsize-small:		 15px;
 }
 
 @media (max-width: 750px) {
@@ -38,6 +39,7 @@ Ce fichier CSS est commun pour toutes les pages du site web
 		--fontsize-large-text: 	 30px;
 		--fontsize-tabs:	   	 18px;
 		--fontsize-p: 			 16px;
+		--fontsize-small:		 13px;
 	}
 }
 
@@ -72,14 +74,49 @@ p {
 	word-wrap: break-word;
 }
 
+.hr {
+	display: block;
+	width: 100%;
+	border-bottom: solid 2px;
+}
+
 
 #loader {
 	position: fixed;
 	width: 100%;
 	height: 100%;
-	z-index: 1000;
+	z-index: 10000;
 
 	background: var(--dark-green) url(../MEDIAS/loading.gif) no-repeat center center;
+}
+
+#format {
+	display: none; 
+
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 10000;
+	
+	line-height: 100vh;
+	text-align: center;
+
+	background-color: var(--dark-green);
+}
+
+#format > p {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: normal;
+}
+
+@media(max-aspect-ratio: 1/3)
+or    (max-width:  300px)
+or    (max-height: 300px) 
+or    (min-aspect-ratio: 3/1) {
+	#format {
+		display: block;
+	}
 }
 
 
@@ -97,13 +134,13 @@ header {
 	box-shadow: 0 -50px 15px -30px var(--dark-green) inset;
 }
 
-@media(max-width: 1400px) {
+@media(max-aspect-ratio: 7/4) {
 	header {
 		background-position: left;
 	}
 }
 
-@media(max-width: 750px) {
+@media(max-aspect-ratio: 15/17) {
 	header {
 		background-image   : url(../MEDIAS/background_phone.png);
 		background-position: top;
@@ -196,7 +233,7 @@ nav {
 }
 
 
-@media(max-width: 750px) {
+@media(max-aspect-ratio: 15/17) or (max-width: 650px) {
 	nav {
 		min-height: 80px;
 	}
@@ -275,13 +312,13 @@ nav {
 }
 
 
-@media(max-width: 1400px) {
+@media(max-aspect-ratio: 7/4) {
 	#main_title {
 		margin-top: 50vh;
 	}
 }
 
-@media(max-width: 950px) {
+@media(max-aspect-ratio: 19/17) {
 	#main_title {
 		position: absolute;
 		top: 65%;
@@ -312,8 +349,8 @@ nav {
 }
 
 
-#about hr {
-	color: var(--mid-accent);
+#about span.hr {
+	border-color: var(--mid-accent);
 	margin: 30px 0;
 }
 
@@ -460,7 +497,7 @@ nav {
 }
 
 
-@media (max-width: 1200px) {
+@media (max-aspect-ratio: 24/17) {
 	#about {
 		flex-direction: column;
 	}
@@ -480,24 +517,32 @@ nav {
 
 		text-align: center;
 
+		height: auto;
 		width: 100%;
 	}
 
 	#about > .col2 img {
 		object-fit: cover;
 		width: 100%;
-		height: 50%;
+		height: 50vh;
 	}
 }
 
-@media (max-width: 800px) {
+@media (max-aspect-ratio: 1/1) {
+
+	#about > .col2 img {
+		object-fit: cover;
+		width: 100%;
+		height: 30vh;
+	}
+
 	#about-tab {
 		justify-content: center;
 	}
 
 	.about-tab-title {
 		margin: auto;
-		width: 32%;
+		width: 33%;
 	}
 
 	.about-tab-title:nth-child(3) span {
@@ -509,10 +554,6 @@ nav {
 	}
 
 	.about-tab-content-logos > span {
-		display: block;
-	}
-
-	#about-education > ul > .about-tab-content-text {
 		display: block;
 	}
 
@@ -530,7 +571,8 @@ nav {
 
 /* My works sections */
 #works {
-	padding-top: 10px;
+	padding-top:    10px;
+	padding-bottom: 10px;
 
 	display  : flex;
 	flex-wrap: wrap;
@@ -540,8 +582,8 @@ nav {
 	background-color: var(--white);
 }
 
-#works hr {
-	color: var(--dark-green);
+#works span.hr {
+	border-color: var(--dark-green);
 	margin: 30px 0;
 }
 
@@ -590,7 +632,7 @@ nav {
 	border-radius: 10px;
 }
 
-@media (max-width: 1000px) {
+@media (max-aspect-ratio: 20/17) {
 	#works {
 		flex-direction: column;
 	}
@@ -606,21 +648,19 @@ nav {
 	#works > .col1 > p {
 		width: 100%;
 	}
+}
 
+
+@media (max-aspect-ratio: 14/17) {
 	#works > .col2 {
 		width: 100%;
-		height: auto;
-
-		display: flex;
-		flex-direction: column;
+		display: block;
 	}
 
 	.work-img {
-		display: block;
-
 		object-fit: cover;
 		width: 100%;
-		height: 20%;
+		height: 20vh;
 
 		margin: 5px auto;
 	
@@ -632,6 +672,7 @@ nav {
 /* Contacts */
 #contacts {
 	display  : flex;
+	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-between;	
 
@@ -648,13 +689,25 @@ nav {
 	color      : var(--mid-accent);
 }
 
-.section-header hr {
-	color: var(--mid-accent);
-	margin: 30px 0;
+.contact-precision {
+	margin: 0 0 25px;
 }
 
+#contacts > .col2 > .contact-precision {
+	display: none;
+}
+
+.contact-precision span {
+	font-size: var(--fontsize-small);
+}
+
+#contacts span.hr {
+	border-color: var(--mid-accent);
+	margin: 10px 0 30px;
+} 
+
 #contacts > .col1 {
-	flex-basis: 60%;
+	flex-basis: 50%;
 }
 
 #message-form {
@@ -664,12 +717,15 @@ nav {
 
 #top-form {
 	display: flex;
+	justify-content: space-between;
 	width: 100%;
 }
 
 .contact-input {
 	display: flex;
 	flex-direction: column;
+
+	padding: 5px 0 10px;
 }
 
 .contact-input > label {
@@ -702,13 +758,11 @@ nav {
 }
 
 .contact-input.short {
-	flex: 50%;
-	padding: 10px;
+	width: 49%;
 }
 
 .contact-input.large {
-	flex: 100%;
-	padding: 10px;
+	width: 100%;
 }
 
 .contact-input.large > textarea {
@@ -740,8 +794,9 @@ nav {
 }
 
 #contacts > .col2 {
-	flex-basis: 40%;
+	flex-basis: 50%;
 	flex-direction: column;
+	width: 100%;
 
 	margin: auto 0;
 
@@ -763,15 +818,18 @@ nav {
 .contact-logos {
 	flex-basis: 25%;
 	display: block;
+	object-fit: contain;
+	width: 100%;
+	height: 100%;
 
-	margin-right: 15px;
-	width: min(10vmin, 65px);
+	margin: auto;
 }
 
 .contact-content {
 	display: flex;
 	flex-direction: column;
 
+	margin-left: 15px;
 	width: 100%;
 }
 
@@ -791,7 +849,7 @@ nav {
 
 
 
-@media (max-width: 1000px) {
+@media (max-aspect-ratio: 7/4) {
 	#contacts {
 		flex-direction: column;
 	}
@@ -805,6 +863,14 @@ nav {
 		flex-direction: column;
 	}
 
+	.contact-input {	
+		margin: 5px 0 10px;
+	}
+
+	.contact-input.short {
+		width: 100%;
+	}
+
 	.contact-buttons {
 		text-align: right;
 	}
@@ -814,11 +880,20 @@ nav {
 
 		width: 100%;
 		padding: 0;
-		margin-bottom: 25px;
 	}
 
 	.contact-option {
 		margin: 5px 0;
+	}
+
+	#contacts > .section-header > .contact-precision {
+		display: none;
+	}
+
+	#contacts > .col2 > .contact-precision {
+		display: block;
+		text-align: center;
+		margin: 30px 0 20px;
 	}
 }
 
