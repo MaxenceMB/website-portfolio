@@ -649,7 +649,7 @@ nav {
 	border: solid 2px var(--dark-green);
 
 	display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 	overflow: hidden;
 }
@@ -661,7 +661,43 @@ nav {
     width: auto;
 	height: auto;
 	max-height: 100%;
-	max-width: 100%;
+	max-width: 90%;
+}
+
+.works-buttons {
+	background-color: none;
+	outline: none;
+	border: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	color: var(--dark-green);
+	font-size: 50px;
+	font-weight: 1000;
+
+	width: 35px;
+
+	transition: 0.25s;
+}
+
+#works-buttons-left {
+	text-align: right;
+}
+
+.works-buttons:hover {
+	cursor: pointer;
+}
+
+#works-buttons-left:hover {
+	transform: translateX(-5px);
+}
+
+#works-buttons-right:hover {
+	transform: translateX(5px);
 }
 
 #works-slider {
@@ -691,6 +727,13 @@ nav {
 	height: auto;
 	max-height: 100%;
 	max-width: 100%;
+
+	transition: 0.25s;
+}
+
+.works-slider-option-img:hover {
+	cursor: pointer;
+	transform: scale(1.05);
 }
 
 #works-desc {

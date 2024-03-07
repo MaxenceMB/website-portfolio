@@ -176,7 +176,9 @@ Le fichier représente la page d'accueil du site web
                 <div class = "col2">
                     <div id = "works-display">
                         <div id = "works-galery">
-                            <img class = "works_img" src = "">
+                            <span class = "works-buttons" id = "works-buttons-left" onclick = changeImage(-1)>&#8249;</span>
+                            <img class = "works_img" src = "">                            
+                            <span class = "works-buttons" id = "works-buttons-right" onclick = changeImage(1)>&#8250;</span>
                         </div>
                         <div id = "works-desc">
                             <h3>Work title</h3>
@@ -263,7 +265,7 @@ Le fichier représente la page d'accueil du site web
             <p>@MaxenceMB - 2024</p>
         </footer>
         
-        <script type = "text/javascript" src = "JAVASCRIPT/jquery-3.7.1.min.js"></script>
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script type = "text/javascript" src = "JAVASCRIPT/script.js"></script>
         <script type = "text/javascript" src = "JAVASCRIPT/works.js"></script>
         <script>
