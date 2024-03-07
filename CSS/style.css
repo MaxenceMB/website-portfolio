@@ -623,16 +623,96 @@ nav {
 #works > .col2 {
 	align-items: center;
 	display: inline-flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 15px;
 }
 
-.work-img {
-	width: 32%;
-	margin: 25px auto;
+#works-display {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	gap: 15px;
 
-	border-radius: 10px;
+	margin: auto;
+	width: 100%;
+
+	height: 70vh;
 }
 
-@media (max-aspect-ratio: 20/17) {
+#works-galery {
+	padding: 25px;
+
+	flex: 1 1 60%;
+
+	border-radius: 25px;
+	border: solid 2px var(--dark-green);
+
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	overflow: hidden;
+}
+
+.works_img {
+	object-fit: contain;
+	border-radius: 15px;
+
+    width: auto;
+	height: auto;
+	max-height: 100%;
+	max-width: 100%;
+}
+
+#works-slider {
+	width: 100%;
+
+	padding: 10px;
+
+	border-radius: 25px;
+	border: solid 2px var(--dark-green);
+
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.works-slider-option {
+	height: 10vh;
+	margin: 0 10px;
+}
+
+.works-slider-option > img {
+	object-fit: cover;
+
+    width: auto;
+	height: auto;
+	max-height: 100%;
+	max-width: 100%;
+}
+
+#works-desc {
+	flex: 1 1 40%;
+
+	border-radius: 25px;
+	background-color: var(--dark-green);
+	border: solid 2px var(--dark-green);
+
+	padding: 25px;
+}
+
+#works-desc h3 {
+	font-size: var(--fontsize-large-text);
+}
+
+#works-desc > span.hr {
+	border-color: var(--white);
+	margin: 20px 0;
+}
+
+
+@media (max-aspect-ratio: 22/17) {
 	#works {
 		flex-direction: column;
 	}
@@ -648,23 +728,17 @@ nav {
 	#works > .col1 > p {
 		width: 100%;
 	}
-}
 
-
-@media (max-aspect-ratio: 14/17) {
-	#works > .col2 {
-		width: 100%;
-		display: block;
+	#works-display {
+		flex-direction: column;
 	}
 
-	.work-img {
-		object-fit: cover;
-		width: 100%;
-		height: 20vh;
+	#works-desc {
+		order: 1;
+	}
 
-		margin: 5px auto;
-	
-		border-radius: 10px;
+	#works-galery {
+		order: 2;
 	}
 }
 
@@ -687,6 +761,15 @@ nav {
 	font-family: Beige-Miracle;
 	font-size  : var(--fontsize-headers);
 	color      : var(--mid-accent);
+}
+
+.contact-option {
+	text-decoration: none;
+	transition: 0.25s;
+}
+
+.contact-option:hover {
+	transform: scale(1.025);
 }
 
 .contact-precision {

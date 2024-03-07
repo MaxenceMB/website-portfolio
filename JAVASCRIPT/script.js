@@ -1,7 +1,7 @@
 /***********************************************************
 
 @Author: Maxence MAURY-BALIT
-Fichier JS pour mon site PortFolio maxence-maury-balit.com
+Fichier JS pour mon site PortFolio max-mb.com
 
 Ce fichier JS est commun pour toutes les pages du site web
 
