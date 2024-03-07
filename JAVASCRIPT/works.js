@@ -21,7 +21,7 @@ var works = [
 ];
 
 function workOption(work) {
-    return "<div class = 'works-slider-option' onclick = showWork("+ work["id"] +")><img class = 'works_img' src = 'MEDIAS/WORKS/" + work["img"] + "'></div>";
+    return "<div class = 'works-slider-option' onclick = showWork("+ work["id"] +")><img class = 'works-slider-option-img' src = 'MEDIAS/WORKS/" + work["img"] + "'></div>";
 }
 
 function showWork(id) {

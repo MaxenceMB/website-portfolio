@@ -683,8 +683,9 @@ nav {
 	margin: 0 10px;
 }
 
-.works-slider-option > img {
+.works-slider-option-img {
 	object-fit: cover;
+	border-radius: 5px;
 
     width: auto;
 	height: auto;
