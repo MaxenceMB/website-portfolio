@@ -654,7 +654,13 @@ nav {
 	overflow: hidden;
 }
 
-.works_img {
+#works-galery-media {
+	display: flex;
+    align-items: center;
+	justify-content: space-around;
+}
+
+.works-media {
 	object-fit: contain;
 	border-radius: 15px;
 
