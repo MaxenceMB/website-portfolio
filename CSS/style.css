@@ -1,7 +1,7 @@
 /***********************************************************
 
 @Author: Maxence MAURY-BALIT
-Fichier CSS pour mon site PortFolio maxence-maury-balit.com
+Fichier CSS pour mon site PortFolio max-mb.com
 
 Ce fichier CSS est commun pour toutes les pages du site web
 
@@ -602,7 +602,7 @@ nav {
 
 #works > .col1 > p {
 	margin: 20px auto;
-	width: 50%;
+	width: 80%;
 
 	font-size : var(--fontsize-p);
 	text-align: justify;
@@ -637,11 +637,11 @@ nav {
 	margin: auto;
 	width: 100%;
 
-	height: 70vh;
+	height: 60vh;
 }
 
 #works-galery {
-	padding: 25px;
+	padding: 10px;
 
 	flex: 1 1 60%;
 
@@ -649,25 +649,44 @@ nav {
 	border: solid 2px var(--dark-green);
 
 	display: flex;
+	flex-direction: column;
     justify-content: space-between;
     align-items: center;
 	overflow: hidden;
 }
 
-#works-galery-media {
+#works-caroussel {
+	width: 100%;
+	height: 90%;
+
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+	overflow: hidden;
+}
+
+#works-dots {
+	height: 10%;
+	width: 100%;
+}
+
+#works-media {
 	display: flex;
     align-items: center;
 	justify-content: space-around;
+
+	height: 95%;
+	width: 95%;
 }
 
-.works-media {
+.works-medias {
 	object-fit: contain;
 	border-radius: 15px;
 
     width: auto;
 	height: auto;
 	max-height: 100%;
-	max-width: 90%;
+	max-width: 100%;
 }
 
 .works-buttons {
@@ -705,6 +724,32 @@ nav {
 #works-buttons-right:hover {
 	transform: translateX(5px);
 }
+
+#works-dots {
+	color: var(--dark-green);
+	
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.works-dot {
+	font-size: 25px;
+	margin: auto 2px;
+	
+	opacity: 50%;
+}
+
+.works-dot:hover {
+	opacity: 75%;
+	cursor: pointer;
+}
+
+.works-dot.selected {	
+	opacity: 100%;
+}
+
 
 #works-slider {
 	width: 100%;

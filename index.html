@@ -1,7 +1,7 @@
 <!-- ***********************************************************
 
 @Author: Maxence MAURY-BALIT
-Fichier HTML pour mon site PortFolio maxence-maury-balit.com
+Fichier HTML pour mon site PortFolio max-mb.com
 
 Le fichier représente la page d'accueil du site web
 
@@ -166,8 +166,7 @@ Le fichier représente la page d'accueil du site web
                     <h2>My works</h2>
                     <p>
                         I define myself as a programmer and an artist. I really like program something and make it come alive with great and refined design. 
-                        Sometimes, I also try myself in pure desing like pixel art, 3D modeling or even music. <br>
-                        If you want to see some of my works in more details, <a href = "HTML/works.html">click here to see them !</a>
+                        Sometimes, I also try myself in pure desing like pixel art, 3D modeling or even music.
                     </p> 
 
                     <span class = "hr"></span>
@@ -176,12 +175,15 @@ Le fichier représente la page d'accueil du site web
                 <div class = "col2">
                     <div id = "works-display">
                         <div id = "works-galery">
-                            <span class = "works-buttons" id = "works-buttons-left" onclick = changeImage(-1)>&#8249;</span>
-                            <div id = "works-galery-media">
-                                <img id = "works-img" class = "works-media" src = "">
-                                <video id = "works-video" class = "works-media" controls muted><source src = "" type = "video/mp4"></video>
-                            </div>                         
-                            <span class = "works-buttons" id = "works-buttons-right" onclick = changeImage(1)>&#8250;</span>
+                            <div id = "works-caroussel">
+                                <span class = "works-buttons" id = "works-buttons-left" onclick = changeImage(-1)>&#8249;</span>
+                                <div id = "works-media">
+                                    <img id = "works-img" class = "works-medias" src = "">
+                                    <video id = "works-video" class = "works-medias" autoplay loop muted><source src = ""></video>
+                                </div>                         
+                                <span class = "works-buttons" id = "works-buttons-right" onclick = changeImage(1)>&#8250;</span>
+                            </div>
+                            <div id = "works-dots"></div>
                         </div>
                         <div id = "works-desc">
                             <h3>Work title</h3>
