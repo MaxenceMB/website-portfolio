@@ -689,10 +689,7 @@ nav {
 	max-width: 100%;
 }
 
-#works-video-loader {
-	width: 100%;
-	height: 100%;
-
+#works-video {
 	background: url(../MEDIAS/loading.gif) no-repeat center center;
 }
 

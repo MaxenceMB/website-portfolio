@@ -110,16 +110,12 @@ function showMedia(work, number) {
                 $("#works-img").hide();
                 $("#works-video > source").attr("src", "MEDIAS/WORKS/" + works[work]["medias"][number]);
                 $("#works-video")[0].load();
-                $("#works-video-loader").show();
+                $('#works-video').show();
             }         
 
             $(carousselDiv).attr("data-img", number);
             $(".works-dot:nth-child(" + (+number+1) + ")").addClass("selected");
             $(mediasDiv).fadeIn(100);
-
-            $("#works-video").on("loadeddata", function() {
-                $('#works-video-loader').fadeOut(100, function() { $('#works-video').fadeIn(100); });
-            });
         });
     }
 }
