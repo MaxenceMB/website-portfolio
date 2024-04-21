@@ -28,6 +28,7 @@ Ce fichier CSS est commun pour toutes les pages du site web
 	--fontsize-tabs:	   	 20px;
 	--fontsize-p: 			 18px;
 	--fontsize-small:		 15px;
+	--fontsize-very-small:	 13px;
 }
 
 @media (max-width: 750px) {
@@ -40,6 +41,7 @@ Ce fichier CSS est commun pour toutes les pages du site web
 		--fontsize-tabs:	   	 18px;
 		--fontsize-p: 			 16px;
 		--fontsize-small:		 13px;
+		--fontsize-very-small:	 11px;
 	}
 }
 
@@ -442,22 +444,52 @@ nav {
 	display: inline;
 }
 
+.about-tab-content-logos {
+	display: flex;
+	flex-direction: row;
+}
+
+.about-tab-content-logos > div {
+	display: flex;
+	flex-direction: row;
+	gap: 3px;
+}
+
 .about-tab-content-logos > span {
 	display: none;
 }
 
-.logos {
-	width: min(10vmin, 65px);
-	margin-bottom: 15px;
+.logo_case {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
 
+	text-align: center;
+	margin-bottom: 15px;
+	
+	width: min(10vmin, 65px);
+}
+
+.logo_case > p {
+	text-align: center;
+	width: min-content;
+
+	margin-left: auto;
+	margin-right: auto;
+
+	font-size: var(--fontsize-very-small);
+}
+
+.logos {
 	transition: 0.25s;
 }
 
 .logos:hover {
 	transform: scale(1.25);
+	z-index: 100;
 }
 
-.logos.left_space {
+.logo_case.left_space {
 	margin-left: 20px;
 }
 
@@ -497,7 +529,15 @@ nav {
 }
 
 
-@media (max-aspect-ratio: 24/17) {
+
+#about > .col2 img.wrapped {
+	object-fit: cover;
+	width: 100%;
+	height: 50vh;
+}
+
+
+@media (max-aspect-ratio: 28/16) {
 	#about {
 		flex-direction: column;
 	}
@@ -521,20 +561,13 @@ nav {
 		width: 100%;
 	}
 
-	#about > .col2 img {
-		object-fit: cover;
-		width: 100%;
-		height: 50vh;
+	.about-tab-content-logos {
+		justify-content: space-around;
 	}
+	
 }
 
 @media (max-aspect-ratio: 1/1) {
-
-	#about > .col2 img {
-		object-fit: cover;
-		width: 100%;
-		height: 30vh;
-	}
 
 	#about-tab {
 		justify-content: center;
@@ -549,12 +582,17 @@ nav {
 		display: none;
 	}
 
-	.logos.left_space.breakable {
+	.logo_case.breakable {
 		margin-left: 0;
 	}
 
-	.about-tab-content-logos > span {
-		display: block;
+	.about-tab-content-logos {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.about-tab-content-logos > div {
+		margin: 0 auto;
 	}
 
 	.edu-img {
